@@ -1,0 +1,136 @@
+.home{
+    background: url(../../images/walpaper1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.home .content{
+    width: 55rem;
+    padding: 2rem;
+}
+
+.main {
+    align-items: center;
+    min-height: 10vh;
+}
+
+.home .content{
+    text-align: center;
+    padding-top: 10rem;
+    padding-bottom: 15rem;
+    margin-left: 25rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.home .content p{
+    line-height: 2;
+    font-size: 1.5rem;
+    color: black;
+    padding: 1rem 0;
+}
+
+.home .content span{
+    color: var(--blue);
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* media quaries */
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+
+    .header .link-btn{
+        display: none;
+    }
+
+    section{
+        padding:5rem 2rem;
+    
+    }
+}
+
+@media(max-width: 768px){
+
+    section{
+        padding:3rem 1rem;
+    
+    }
+
+    #menu-btn{
+        display: inline-block;
+        transition: .2s linear;
+    }
+
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+    }
+
+    .header .nav{
+        position: absolute;
+        top:99%;
+        left: 0;
+        right: 0;
+        background-color: var(--white);
+        border-top: var(--border);
+        border-bottom: var(--border);
+        padding: 1rem 0;
+        text-align: center;
+        flex-flow: column;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .2s linear;
+    }
+
+    .header .nav.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .nav a{
+        margin: 1rem 0;
+        font-size: 2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
+
+    .home .content{
+        width: auto;
+        margin-left: 5rem;
+    }
+
+    
+}
+
+@media(max-width: 450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .home .content h3{
+        font-size: 4rem;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+}
