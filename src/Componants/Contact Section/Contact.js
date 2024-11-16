@@ -24,10 +24,10 @@ const Contact = () => {
       setMessage('Please fill in all fields.');
       return;
     }
-
+  
     setLoading(true);
     try {
-      const response = await fetch('http://localhost/Server/contact.php', {
+      const response = await fetch('http://localhost/React System developmet/handymax/Server/contact.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -51,60 +51,35 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact" id="contact">
-      <h1 className="heading">Make Appointment</h1>
-      <form onSubmit={handleSubmit}>
-        {message && <p>{message}</p>}
-        <label>
-          Your Name:
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className="box"
-            required
-          />
-        </label>
-        <label>
-          Your Email:
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="box"
-            required
-          />
-        </label>
-        <label>
-          Your Number:
-          <input
-            type="text"
-            name="number"
-            value={formData.number}
-            onChange={handleChange}
-            className="box"
-            required
-          />
-        </label>
-        <label>
-          Appointment Date:
-          <input
-            type="datetime-local"
-            name="date"
-            value={formData.date}
-            onChange={handleChange}
-            className="box"
-            required
-          />
-        </label>
-        <button type="submit" className="link-btn" disabled={loading}>
-          {loading ? 'Submitting...' : 'Make Appointment'}
-        </button>
-      </form>
-    </section>
-  );
+    <section className='contact' id='contact'>
+    <h1 className="heading">make appointment</h1>
+
+    <form onSubmit={handleSubmit}>
+      {message && (
+        <p className={message.includes('successfully') ? 'success-message' : 'error-message'}>
+          {message}
+        </p>
+      )}
+      <label>
+        Your Name:
+        <input type="text" name="name" onChange={handleChange} className='box' required />
+      </label>
+      <label>
+        Your Email:
+        <input type="email" name="email" onChange={handleChange} className='box' required />
+      </label>
+      <label>
+        Your Number:
+        <input type="text" name="number" onChange={handleChange} className='box' required />
+      </label>
+      <label>
+        Appointment Date:
+        <input type="datetime-local" name="date" onChange={handleChange} className='box' required />
+      </label>
+      <button type="submit" className='link-btn'>Make Appointment</button>
+    </form>
+  </section>
+);
 };
 
 export default Contact;

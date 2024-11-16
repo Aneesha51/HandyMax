@@ -1,20 +1,33 @@
-let menu = document.querySelector('#menu-btn');
-let navbar = document.querySelector('.header .nav');
-let header = document.querySelector('.header');
+// Import required modules
+const express = require('express');
+const cors = require('cors');
+const app = express();
 
-menu.onclick = () =>{
-    menu.classList.toggle('fa-times');
-    navbar.classList.toggle('active');
-}
+// Middleware to enable CORS for all routes
+app.use(cors());  // This will allow all domains
 
-window.onscroll = () =>{
-    menu.classList.remove('fa-times');
-    navbar.classList.remove('active');
+// Alternatively, you can restrict CORS to specific domains like this:
+// app.use(cors({
+//   origin: 'http://localhost:3000'  // Adjust this URL to your frontend's URL
+// }));
 
-    if(window.scrollY > 0){
-        header.classList.add('active');
-    }else {
-        header.classList.remove('active');
-    }
-    
-}
+// Middleware to parse JSON bodies
+app.use(express.json());
+
+// Example POST route
+app.post('/contact', (req, res) => {
+  const { name, email, number, date } = req.body;
+
+  // You can process the form data here, like inserting it into a database
+
+  console.log('Received:', name, email, number, date);
+
+  // Send a response back
+  res.json({ message: 'Appointment made successfully!' });
+});
+
+// Start the server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});

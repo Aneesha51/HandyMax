@@ -54,6 +54,28 @@ section{
     color: var(--black);
 }
 
+.success-message {
+    color: var(--blue);
+    background-color: var(--white); /* Light green background */
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 2rem;
+    font-size: 20px;
+  }
+  
+  /* Error message */
+  .error-message {
+    color: red;
+    background-color: #ffdddd; /* Light red background */
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+  }
 
 
 

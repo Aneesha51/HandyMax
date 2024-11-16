@@ -34,6 +34,20 @@
     line-height: 2;
 }
 
+.footer .credit{
+    text-align: center;
+    border-top: var(--border);
+    padding-top: 2rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: var(--light-color);
+    padding-bottom: 2rem;
+}
+
+.footer .credit span{
+    color: var(--blue);
+}
+
 
 
 

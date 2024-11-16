@@ -36,7 +36,7 @@ const Footer = () => {
      </div>
      </div>
 
-     <div className="credit">copy; copyright @ 2024 by <span>Aneesha Rangan</span></div>
+     <div className="credit">© copyright @ 2024 by <span>Aneesha Rangan</span></div>
      </section>
   )
 }
