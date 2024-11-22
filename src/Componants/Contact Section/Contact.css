@@ -56,7 +56,7 @@ section{
 
 .success-message {
     color: var(--blue);
-    background-color: var(--white); /* Light green background */
+    background-color: var(--white); 
     padding: 10px;
     border-radius: 5px;
     font-weight: bold;
@@ -69,7 +69,7 @@ section{
   /* Error message */
   .error-message {
     color: red;
-    background-color: #ffdddd; /* Light red background */
+    background-color: #ffdddd; 
     padding: 10px;
     border-radius: 5px;
     font-weight: bold;
